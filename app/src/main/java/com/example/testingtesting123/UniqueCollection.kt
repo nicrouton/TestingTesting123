@@ -11,14 +11,19 @@ class UniqueCollection {
     fun get (position: Int) = collection[position]
 
     fun remove (item: Item){
-        !collection.remove(item)
+        collection.remove(item)
     }
 
-    fun clear () {
 
-    }
 
     fun size() = collection.size
+
+    // clear function
+    fun clear() {
+        while (collection.size != 0) {
+            collection.remove(collection[collection.size - 1])
+        }
+    }
 
 
 }
